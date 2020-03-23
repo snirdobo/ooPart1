@@ -9,16 +9,33 @@
 #include "date.h"
 
 
-class party {
+class Party {
 
 public:
     enum class politicalFactions {Left, Center, Right};
 
 private:
     char name[20];
-    politicalFactions theFactions;
-    date theDate;
-    citizen* candidates;
+    politicalFactions* theFactions;
+    Date* theDate;
+    int numOfCandidates;
+    int sizeOfCandidates;
+    Citizen** candidates;
+
+public:
+
+    void init();
+    //setters
+    bool setName(char* n);
+    bool setPoliticalFactions(politicalFactions p);
+    bool setDate(Date* d);
+    bool setCandidates(Citizen* c);
+
+    //getters
+    char* getName();
+    politicalFactions getPoliticalFactions();
+    Date* getDate();
+    Citizen* getCandidates();
 };
 
 

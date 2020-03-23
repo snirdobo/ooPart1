@@ -6,13 +6,26 @@
 #define OOPART1_DATE_H
 
 
-class date {
+class Date {
 
 private:
     int day;
     int month;
     int year;
+
+public:
+
+    //setters
+    bool setDay(int d);
+    bool setMonth(int m);
+    bool setYear(int y);
+
+    //getters
+    int getDay();
+    int getMonth();
+    int getYear();
 };
+
 
 
 #endif //OOPART1_DATE_H

@@ -6,7 +6,7 @@
 #define OOPART1_CITIZEN_H
 
 
-class citizen {
+class Citizen {
 
 private:
 
@@ -18,7 +18,17 @@ private:
 
 public:
 
+    //setters
+    bool setName(char* n);
+    bool setId(int i);
+    bool setYearOfBirth(int y);
+    bool setBallotBox(int b);
 
+    //getters
+    char* getName();
+    int getId();
+    int getYearOfBirth();
+    int getBallotBox();
 };
 
 
